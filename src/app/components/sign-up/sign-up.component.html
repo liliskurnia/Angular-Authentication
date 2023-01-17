@@ -78,6 +78,7 @@
                         authService.SignUp(userEmail.value, userPwd.value)
                       "
                     >
+                    <i class="uil uil-signin"></i>
                       Sign Up
                     </button>
                   </div>
@@ -95,15 +96,17 @@
                       (click)="authService.GoogleAuth()"
                     >
                       <i class="fab fa-google-plus-g"></i>
+                      <i class="uil uil-google"></i>
                       Continue with Google
                     </button>
                   </div>
                   <div class="redirectToLogin" style="color: #393f81">
                     <span
                       >Already have an account?
-                      <span class="redirect" routerLink="/sign-in"
+                      <a class="redirect" routerLink="/sign-in">
+                      <span
                         >Log In here</span
-                      ></span
+                      ></a></span
                     >
                   </div>
                 </form>

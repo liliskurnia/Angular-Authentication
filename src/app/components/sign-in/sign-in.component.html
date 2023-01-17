@@ -59,7 +59,8 @@
                   </div>
 
                   <div class="forgotPassword" style="color: #393f81">
-                    <span routerLink="/forgot-password">Forgot Password?</span>
+                    <a routerLink="/forgot-password">
+                    <span >Forgot Password?</span></a>
                   </div>
                   <br />
                   <div class="pt-1 mb-4">
@@ -71,6 +72,7 @@
                         authService.SignUp(userName.value, userPwd.value)
                       "
                     >
+                    <i class="uil uil-signin"></i>
                       Sign In
                     </button>
                   </div>
@@ -88,15 +90,17 @@
                       (click)="authService.GoogleAuth()"
                     >
                       <i class="fab fa-google-plus-g"></i>
+                      <i class="uil uil-google"></i>
                       Continue with Google
                     </button>
                   </div>
                   <div class="redirectToLogin" style="color: #393f81">
                     <span
                       >Don't have an account?
-                      <span class="redirect" routerLink="/register-user"
+                      <a class="redirect" routerLink="/register-user">
+                      <span
                         >Sign Up here</span
-                      ></span
+                      ></a></span
                     >
                   </div>
                 </form>
