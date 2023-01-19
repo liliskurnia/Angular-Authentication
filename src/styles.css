@@ -71,3 +71,29 @@ footer {width: 100%;text-align: center;padding-bottom: 25px;border-top: 1px soli
  .sidebar {padding: 40px 0 15px;}
  footer br { display: none; }
 }
+
+.sidebar{
+    border-radius: 10px;
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    padding-top: 40px;
+    width: 100%;
+    padding-right: 0;
+}
+
+.sidebar-sticky{
+    position: absolute;
+    width: 100%;
+
+}
+
+.card{
+    margin-bottom: 8%;
+    background-color: rgb(243, 245, 247);
+}
+
+body 
+.table thead th {
+    background: #bcbcbf;
+}

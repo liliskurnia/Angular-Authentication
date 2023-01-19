@@ -1,53 +1,4 @@
-<section
-  class="vh-100"
-  style="background: rgb(255,255,255);
-  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(210,228,241,1) 50%, rgba(189,216,241,1) 100%);
-  "
->
-
-<!-- Top navigation -->
-<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow" style="height: 10%;">
-    <a class="navbar-brand col-sm-3 col-md-2 mr-0">
-      <img class="brand-logo" src="assets/logo1.png" alt="positronX.io Logo">
-    </a>
-  </nav>
-<div class="container-fluid" style="padding-top: 40px;">
-    <div class="row">
-      <nav class="col-md-2 d-md-block bg-light sidebar">
-        <div class="sidebar-sticky">
-          <ul class="nav flex-column">
-            <li class="nav-item">
-              <a class="nav-link active" routerLink="/dashboard">
-                <i class="fas fa-user"></i>
-                <i class="uil uil-user-circle"></i>User Profile
-              </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" routerLink="/register-student">
-                  <i class="fas fa-user"></i>
-                  <i class="uil uil-user-plus"></i>Add Student
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" routerLink="/view-students">
-                  <i class="fas fa-user"></i>
-                  <i class="uil uil-list-ul"></i>Student List
-                </a>
-              </li>
-            <!-- Calling SignOut() Api from AuthService -->
-            <li class="nav-item">
-              <a type="button"  class="nav-link" (click)="authService.SignOut()">
-                <i class="fas fa-sign-out-alt"></i
-                ><i class="uil uil-signout"></i>Log out
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-
-      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-        
-    <div class="card text-left w-100 container h-70" style="width: 300px;">
+<div class="card text-left w-100 container h-70" style="width: 300px;">
 <div
   class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
 >
@@ -142,10 +93,3 @@
   </div>
 </div>
     </div>
-</main>
-<!-- Top navigation -->
-<nav class="navbar navbar-dark fixed-bottom bg-dark flex-md-nowrap p-0 shadow">
-    <a class="navbar-brand col-sm-3 col-md-2 mr-0">
-      <!-- <img class="brand-logo" src="assets/logo-positronx-white.svg" alt="positronX.io Logo"> -->
-    </a>
-  </nav>

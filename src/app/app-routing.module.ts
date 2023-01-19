@@ -10,16 +10,28 @@ import { AuthGuard } from './shared/guard/auth.guard';
 import { AddStudentComponent } from './CRUD/add-student/add-student.component';
 import { StudentListComponent } from './CRUD/student-list/student-list.component';
 import { EditStudentComponent } from './CRUD/edit-student/edit-student.component';
+import { LayoutComponent } from './components/layout/layout.component';
 const routes: Routes = [
   { path: '', redirectTo: '/sign-in', pathMatch: 'full' },
   { path: 'sign-in', component: SignInComponent },
   { path: 'register-user', component: SignUpComponent },
-  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'verify-email-address', component: VerifyEmailComponent },
-  { path: 'register-student', component: AddStudentComponent },
-  { path: 'view-students', component: StudentListComponent },
-  { path: 'edit-student/:id', component: EditStudentComponent }
+   { 
+    path: '', 
+    component : LayoutComponent,
+    canActivate: [AuthGuard],
+    data: {
+      title: 'home',
+    },
+    children: [
+      { path: 'dashboard', component: DashboardComponent },
+      { path: 'register-student', component: AddStudentComponent },
+      { path: 'view-students', component: StudentListComponent },
+      { path: 'edit-student/:id', component: EditStudentComponent },
+    ]
+
+  },
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
