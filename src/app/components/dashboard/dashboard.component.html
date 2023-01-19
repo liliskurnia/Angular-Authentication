@@ -1,17 +1,23 @@
 <section
   class="vh-100"
-  style="background: rgb(255,255,255);
-  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(210,228,241,1) 50%, rgba(189,216,241,1) 100%);
+  style="
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(210, 228, 241, 1) 50%,
+      rgba(189, 216, 241, 1) 100%
+    );
   "
 >
   <!-- Top navigation -->
-  <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+  <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow" style="height: 10%;">
     <a class="navbar-brand col-sm-3 col-md-2 mr-0">
-      <!-- <img class="brand-logo" src="assets/logo-positronx-white.svg" alt="positronX.io Logo"> -->
+      <img class="brand-logo" src="assets/logo1.png" alt="positronX.io Logo">
     </a>
   </nav>
   <!-- Sidebar navigation -->
-  <div class="container-fluid">
+  <div class="container-fluid" style="padding-top: 40px;">
     <div class="row">
       <nav class="col-md-2 d-md-block bg-light sidebar">
         <div class="sidebar-sticky">
@@ -36,7 +42,7 @@
             </li>
             <!-- Calling SignOut() Api from AuthService -->
             <li class="nav-item">
-              <a class="nav-link" href="#!" (click)="authService.SignOut()">
+              <a type="button" class="nav-link" (click)="authService.SignOut()">
                 <i class="fas fa-sign-out-alt"></i
                 ><i class="uil uil-signout"></i>Log out
               </a>
@@ -44,9 +50,10 @@
           </ul>
         </div>
       </nav>
+
       <!-- Main content -->
       <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-        <div class="card text-left w-100 container h-70" style="width: 300px;">
+        <div class="card text-left w-100 container h-70" style="width: 300px">
           <div class="pt-3 pb-2 mb-3 border-bottom">
             <h1 class="h2">User Profile</h1>
           </div>
@@ -81,9 +88,16 @@
               </div>
             </div>
           </div>
+          <div class="col-md-12">
+            <div class="img">
+              <img src="assets/Success.png" alt="" class="img-hero" />
+            </div>
+          </div>
         </div>
       </main>
-      <nav class="navbar navbar-dark fixed-bottom bg-dark flex-md-nowrap p-0 shadow">
+      <nav
+        class="navbar navbar-dark fixed-bottom bg-dark flex-md-nowrap p-0 shadow"
+      >
         <a class="navbar-brand col-sm-3 col-md-2 mr-0">
           <!-- <img class="brand-logo" src="assets/logo-positronx-white.svg" alt="positronX.io Logo"> -->
         </a>

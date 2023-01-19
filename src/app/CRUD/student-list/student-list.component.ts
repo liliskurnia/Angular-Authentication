@@ -3,7 +3,7 @@ import { CrudService } from '../crud.service';
 import { Student } from './../student'; 
 import { ToastrService } from 'ngx-toastr';
 import { AuthService } from 'src/app/shared/services/auth.service';
-
+import { Location } from '@angular/common';
 @Component({
   selector: 'app-student-list',
   templateUrl: './student-list.component.html',
@@ -19,7 +19,8 @@ export class StudentListComponent implements OnInit {
   constructor(
     public crudApi: CrudService,
     public toastr: ToastrService,
-    public authService: AuthService
+    public authService: AuthService,
+    private location: Location
     ){ }
 
   ngOnInit() {
@@ -51,5 +52,9 @@ export class StudentListComponent implements OnInit {
       this.crudApi.DeleteStudent(student.$key)
       this.toastr.success(student.firstName + ' successfully deleted!');
     }
+  }
+
+  goBack() {
+    this.location.back();
   }
 }

@@ -5,3 +5,9 @@
 .bg-dark {
     background-color: rgb(85, 132, 172) !important;
 }
+
+.img {
+    text-align: right!important;
+    padding-right: 20px;
+    padding-bottom: 50px;
+}

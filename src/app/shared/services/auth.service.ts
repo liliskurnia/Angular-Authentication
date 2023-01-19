@@ -126,7 +126,11 @@ export class AuthService {
     });
   }
   // Sign out
+  // Sign out
   SignOut() {
+    if (window.confirm("Do you really want to leave?")) {
+      
+    } else {return}
     return this.afAuth.signOut().then(() => {
       localStorage.removeItem('user');
       this.router.navigate(['sign-in']);

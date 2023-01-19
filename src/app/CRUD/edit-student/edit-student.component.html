@@ -6,12 +6,12 @@
 >
 
 <!-- Top navigation -->
-<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow" style="height: 10%;">
     <a class="navbar-brand col-sm-3 col-md-2 mr-0">
-      <!-- <img class="brand-logo" src="assets/logo-positronx-white.svg" alt="positronX.io Logo"> -->
+      <img class="brand-logo" src="assets/logo1.png" alt="positronX.io Logo">
     </a>
   </nav>
-<div class="container-fluid">
+<div class="container-fluid" style="padding-top: 40px;">
     <div class="row">
       <nav class="col-md-2 d-md-block bg-light sidebar">
         <div class="sidebar-sticky">
@@ -36,7 +36,7 @@
               </li>
             <!-- Calling SignOut() Api from AuthService -->
             <li class="nav-item">
-              <a class="nav-link" href="#!" (click)="authService.SignOut()">
+              <a type="button"  class="nav-link" (click)="authService.SignOut()">
                 <i class="fas fa-sign-out-alt"></i
                 ><i class="uil uil-signout"></i>Log out
               </a>
@@ -54,8 +54,8 @@
   <h1 class="h2">Edit Student Details</h1>
   <div class="btn-toolbar mb-2 mb-md-0">
     <div class="btn-group">
-      <button class="btn btn-sm btn-outline-secondary" (click)="goBack()">
-        Go Back
+      <button class="btn btn-sm btn-outline-secondary"(click)="goBack()">
+        <i class="uil uil-arrow-circle-left"></i>Go Back
       </button>
     </div>
   </div>

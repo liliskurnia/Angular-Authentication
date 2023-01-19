@@ -3,6 +3,7 @@ import { CrudService } from '../crud.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { AuthService } from 'src/app/shared/services/auth.service';
+import { Location } from '@angular/common';
 @Component({
   selector: 'app-add-student',
   templateUrl: './add-student.component.html',
@@ -14,7 +15,8 @@ export class AddStudentComponent implements OnInit {
     public crudApi: CrudService,
     public fb: FormBuilder,
     public toastr: ToastrService,
-    public authService: AuthService
+    public authService: AuthService,
+    private location: Location,
   ) {}
   ngOnInit() {
     this.crudApi.GetStudentsList();
@@ -55,5 +57,8 @@ export class AddStudentComponent implements OnInit {
       this.studentForm.controls['firstName'].value + ' successfully added!'
     );
     this.ResetForm();
+  }
+  goBack() {
+    this.location.back();
   }
 }
